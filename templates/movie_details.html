@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ movie.title }} - Details{% endblock %}
+
+{% block body %}
+<h1>{{ movie.title }}</h1>
+
+<p>
+  {{ movie.overview }}
+</p>
+<h2>Rate this movie!</h2>
+  <form action="/create-rating" method="POST">
+    <p>
+      Your rating: <input type="radio" name="rating" value="rating_1" id="rating_1"><label for="rating_1">1</label> 
+                  <input type="radio" name="rating" value="rating_2" id="rating_2"><label for="rating_2">2</label> 
+                  <input type="radio" name="rating" value="rating_3" id="rating_3"><label for="rating_3">3</label> 
+                  <input type="radio" name="rating" value="rating_4" id="rating_4"><label for="rating_4">4</label> 
+                  <input type="radio" name="rating" value="rating_5" id="rating_5"><label for="rating_5">5</label> 
+    </p>
+
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+<img src="{{ movie.poster_path }}" >
+
+
+{% endblock %}
