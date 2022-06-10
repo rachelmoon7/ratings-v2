@@ -50,6 +50,10 @@ def get_user_by_email(email):
 
     return User.query.filter(User.email == email).first() 
 
+# def get_rating_by_id(user_id):
+#     """Get rating of the user_id"""
+
+#     return Rating.query.filter(Rating.user_id).all()
 
 if __name__ == '__main__':
     from server import app

@@ -46,6 +46,7 @@ def show_user_info(user_id):
     """Get user info corresponding with user ID"""
 
     user = crud.get_user_by_id(user_id)
+    # ratings = user.ratings
 
     return render_template("user_details.html", user=user)
 

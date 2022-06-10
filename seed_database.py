@@ -9,6 +9,9 @@ import crud
 import model
 import server
 
+#os.system is like running a command on the terminal 
+#when u run see_database.py and gets to line 14-15, tell command
+#to dropdb ratings, runs only when u run seed_database.py
 os.system("dropdb ratings")
 os.system('createdb ratings')
 
